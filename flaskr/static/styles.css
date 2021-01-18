@@ -1,0 +1,73 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url('https://images.unsplash.com/photo-1517842645767-c639042777db?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8bm90ZXN8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&w=1000&q=80');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.instructions {
+    color: white;
+    font-size: 45px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+#file_upload {
+    margin-left: 35%;
+    margin-top: 21%;
+    margin-bottom: 50px;
+    font-size: 30px;
+}
+
+#submit {
+    border-radius: 25px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 25px;
+    padding-left: 25px;
+    font-size: 45px;
+    margin-left: 40%;
+}
+
+h1 {
+    color: white;
+    font-size: 100px;
+    text-align: center;
+}
+
+.about p { 
+    color: black;
+    font-size: 40px;
+    text-align: center;
+}
+
+.about {
+    background-color: white;
+    margin-right: 10px;
+    margin-left: 10px;
+    border-radius: 15px;
+    margin-top: 25px;
+    background-repeat: no-repeat;
+}
+
+.welcome p {
+    color: white;
+    font-size: 50px;
+    text-align: center;
+    margin-top: 150px;
+}
+
+.welcome h1{
+    margin-top: 50px;
+}
+
+h3 {
+    color: white;
+    font-size: 35px;
+    text-align: center;
+    margin-top: 25px;
+}

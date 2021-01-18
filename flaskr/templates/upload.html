@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+    {% if form.file_upload.errors %}
+        {% for error in form.file_upload.errors %}
+            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                {{ error }}
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        {% endfor %}
+    {% endif %}
+    <form action="" enctype="multipart/form-data" method='POST'>
+        {{ form.hidden_tag() }}
+        <div class="form-group">
+            <h2 class="instructions">{{ form.file_upload.label(class='form-group')}}</h2>
+            {{ form.file_upload(class='form-control-file') }}
+        </div>
+        <div class="form-group">
+            {{ form.submit(class='btn btn-primary') }}
+        </div>
+    </form>
+</div>
+{% endblock content %}
