@@ -1,0 +1,2 @@
+Upload a file with one of the following extensions: .txt).wav, .jpg,
+jpeg, .png es
