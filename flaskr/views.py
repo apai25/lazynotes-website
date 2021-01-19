@@ -19,20 +19,17 @@ def upload():
         file_upload = form.file_upload.data
         path, extension = handle_file(file_upload)
 
-        try: 
-            if extension == 'wav':
-                data = audio_to_string(path)
-            elif extension == 'txt':
-                data = text_to_string(path)
-            else:
-                data = image_to_string(path)
-        
-            summary = summarize(data)
-            summary_file = open(os.path.join(os.path.dirname(__file__), 'data/summary.txt'), 'w')
-            summary_file.write(summary)
-            summary_file.close()
-        except:
-            return redirect(url_for('corrupted'))
+        if extension == 'wav':
+            data = audio_to_string(path)
+        elif extension == 'txt':
+            data = text_to_string(path)
+        else:
+            data = image_to_string(path)
+    
+        summary = summarize(data)
+        summary_file = open(os.path.join(os.path.dirname(__file__), 'data/summary.txt'), 'w')
+        summary_file.write(summary)
+        summary_file.close()
 
         return send_file(os.path.join(os.path.dirname(__file__), 'data/summary.txt'), as_attachment=True)
 
